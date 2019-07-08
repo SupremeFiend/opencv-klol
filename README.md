@@ -12,3 +12,7 @@ Whenever the pixels at the top of the chat window changes, i.e., the person at t
 Immediate frustration will ensue for the spammer and they will give up on spamming you, eventually (hopefully).
 
 Image detection is done using OpenCV. numpy creates the required image array and pyautogui will press the required keys whenever the top pixels change.
+
+Here's the result:
+
+![alt text](https://raw.githubusercontent.com/pranay-venkatesh/opencv-kloler/master/s2.png)
