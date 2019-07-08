@@ -1,3 +1,10 @@
+"""
+kloler (an anti-chatspam tool) using OpenCV
+If the top part of the chat window changes (i.e. a msg is sent by the next person), pyautogui will type 'k lol' and hit enter
+
+Author : Pranay Venkatesh (SupremeFiend)
+
+"""
 import numpy as np
 from PIL import ImageGrab
 import cv2
@@ -19,9 +26,9 @@ def klolify ():
 
 ref_top_screen = ImageGrab.grab(bbox = (45, 180, 700, 280)) # Reference for top part of chat window
 while (True):
-    screen = ImageGrab.grab(bbox = (45, 220, 800, 640))
+    screen = ImageGrab.grab(bbox = (45, 220, 800, 640)) # large image screen (unused)
     curr_top_screen = ImageGrab.grab(bbox = (45, 180, 700, 280)) # Updated top part of chat window
-    cv2.imshow('window', cv2.cvtColor(np.array(curr_top_screen), cv2.COLOR_BGR2GRAY))
+    cv2.imshow('window', cv2.cvtColor(np.array(curr_top_screen), cv2.COLOR_BGR2GRAY)) # Displays the required top part of the window for reference
     if curr_top_screen != ref_top_screen:
         klolify()
         ref_top_screen = curr_top_screen # Updating the reference
