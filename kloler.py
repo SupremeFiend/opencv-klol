@@ -30,8 +30,8 @@ while (True):
     curr_top_screen = ImageGrab.grab(bbox = (45, 180, 700, 280)) # Updated top part of chat window
     cv2.imshow('window', cv2.cvtColor(np.array(curr_top_screen), cv2.COLOR_BGR2GRAY)) # Displays the required top part of the window for reference
     if curr_top_screen != ref_top_screen:
-        klolify()
         ref_top_screen = curr_top_screen # Updating the reference
+        klolify()
         time.sleep(10) # No matter what, at least 10 seconds will elapse before the next 'k lol'
     if cv2.waitKey(25) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
