@@ -6,6 +6,8 @@ Simple process: It detects the top part of the chat box and detects changes to t
 
 ![alt text](https://raw.githubusercontent.com/pranay-venkatesh/opencv-kloler/master/s1.png)
 
+            <b><i> I got OpenCV to print this out at the top of the screen </b> </i>
+
 Whenever the pixels at the top of the chat window changes, i.e., the person at the other end has sent a message, pyautogui will automatically press 'k', 'l', 'o', 'l', 'enter' in that order and send it.
 
 Immediate frustration will ensue for the spammer and they will give up on spamming you, eventually (hopefully).
